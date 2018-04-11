@@ -29,7 +29,7 @@ int main()
   int special = 0;
   int inputCount = 0;
 
-  //create for loop to iterate throught the states
+  //create for loop to iterate through the states
   for(int i=0; i < input.size();i++)
   {
     cout << "current state is: q" <<  state << endl;
@@ -56,12 +56,15 @@ int main()
       {
       special++;
       }
+	  //if the password meets all requirements then it is accepted
   }
   if((uppercase >1) && (lowercase >0) && (digit>1) && (special>0) && (inputCount >7) && (inputCount<11))
     {
       cout << "the password read was: " <<input<<endl; 
       cout <<  "the password is valid and accepted" << endl;
     }
+
+	//else it is not valid
   else if(!(uppercase >1) || !(lowercase >0) || !(digit>1) || !(special>0) || !(inputCount >7) || !(inputCount<11))
     {
       cout << "the password read was: " << input << endl;
